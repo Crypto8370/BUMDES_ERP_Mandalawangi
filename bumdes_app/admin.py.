@@ -1,0 +1,8 @@
+from django.contrib import admin
+from .models import BumdesSettings, Product, Sale, Cashflow
+
+# Daftar tabel yang ingin ditampilkan di Admin Panel
+admin.site.register(BumdesSettings)
+admin.site.register(Product)
+admin.site.register(Sale)
+admin.site.register(Cashflow)
