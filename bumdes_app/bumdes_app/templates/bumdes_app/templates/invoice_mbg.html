@@ -1,0 +1,51 @@
+<div class="p-8 bg-white border shadow-sm max-w-2xl mx-auto my-10 font-serif">
+    <div class="text-center border-b-2 border-black pb-4 mb-4">
+        <h2 class="text-xl font-bold uppercase">Bumdes Putra Mandala Mandalawangi</h2>
+        <p class="text-xs italic text-gray-600">Desa Mandalawangi, Kec. Leles, Kab. Cianjur, Jawa Barat</p>
+    </div>
+    
+    <div class="flex justify-between mb-8">
+        <div>
+            <h3 class="font-bold underline text-lg">INVOICE KERJASAMA / SURAT JALAN</h3>
+            <p class="text-sm text-gray-700">Tujuan: <strong>Dapur MBG (Makanan Bergizi Gratis)</strong></p>
+        </div>
+        <div class="text-right text-sm">
+            <p>No. Invoice: INV-MBG-{{ date|date:"Ymd" }}</p>
+            <p>Tanggal: {{ date }}</p>
+        </div>
+    </div>
+
+    <table class="w-full border-collapse border border-black text-sm mb-6">
+        <thead>
+            <tr class="bg-gray-200">
+                <th class="border border-black p-2 text-left">Nama Barang</th>
+                <th class="border border-black p-2 text-center">Satuan</th>
+                <th class="border border-black p-2 text-center">Jumlah</th>
+                <th class="border border-black p-2 text-right">Harga Satuan</th>
+                <th class="border border-black p-2 text-right">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border border-black p-2 italic text-gray-400 font-light">Contoh: Daging Ayam</td>
+                <td class="border border-black p-2 text-center">Kg</td>
+                <td class="border border-black p-2 text-center">20</td>
+                <td class="border border-black p-2 text-right">Rp 36.000</td>
+                <td class="border border-black p-2 text-right font-bold">Rp 720.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="flex justify-end">
+        <div class="text-right w-1/2">
+            <div class="flex justify-between border-b border-black py-1">
+                <span>SUBTOTAL</span>
+                <span class="font-bold">Rp 720.000</span>
+            </div>
+            <div class="flex justify-between py-2 text-lg font-bold bg-gray-100 p-1">
+                <span>TOTAL AKHIR</span>
+                <span>Rp 720.000</span>
+            </div>
+        </div>
+    </div>
+</div>
