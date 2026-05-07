@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard BUMDES Putra Mandala</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6 border-l-8 border-green-600">
+            <h1 class="text-2xl font-bold text-gray-800">BUMDES PUTRA MANDALA MANDALAWANGI</h1>
+            <p class="text-sm text-gray-600">Saldo Akhir Bank (BRI): <span class="font-bold text-blue-600">Rp 11.029,00</span></p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-green-600 p-6 rounded-lg text-white shadow-lg">
+                <h2 class="text-lg font-semibold opacity-80">Total Profit Bersih</h2>
+                <p class="text-3xl font-bold">Rp {{ total_profit }}</p>
+                <p class="text-xs mt-2 italic">*Berdasarkan margin harga beli & jual</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-gray-500 font-semibold mb-2">Transaksi Terakhir</h2>
+                <ul class="text-sm">
+                    {% for sale in sales %}
+                    <li class="border-b py-2 flex justify-between">
+                        <span>{{ sale.product.name }} ({{ sale.sale_type }})</span>
+                        <span class="font-bold">Rp {{ sale.total_price }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-blue-700 transition">
+            + Input Data Penjualan
+        </button>
+    </div>
+</body>
+</html>
